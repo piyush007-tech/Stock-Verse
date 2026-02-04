@@ -1,0 +1,317 @@
+/* ==================================================
+   THEME VARIABLES
+   ================================================== */
+
+/* LIGHT MODE (default) */
+:root {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --card: #f1f5f9;
+  --border: #d1d5db;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #16a34a;
+  --danger: #dc2626;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg: #0b0f14;
+  --panel: #020617;
+  --card: #0f172a;
+  --border: #1f2933;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --danger: #ef4444;
+}
+
+/* ==================================================
+   GLOBAL RESET
+   ================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==================================================
+   TOP / HERO SECTION
+   ================================================== */
+#top {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin: 16px;
+  padding: 20px 24px 28px;
+}
+
+#top11 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  border-radius: 8px;
+}
+#logo:hover{
+  cursor: pointer;
+  transform: scale(1.5);
+  transition-duration: 0.5s;
+}
+
+/* Right side controls */
+#top1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Search */
+#searchInput {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#searchInput::placeholder {
+  color: var(--muted);
+}
+
+/* Buttons */
+#btn-top {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 7px 7px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#btn-top1 {
+  background: var(--accent);
+  color: #022c22;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Headings */
+#h-top {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#p-top {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+
+/* ==================================================
+   NAV STRIP
+   ================================================== */
+#content {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+#content h3 {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  transition: border 0.2s ease, color 0.2s ease;
+}
+
+#content h3:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ==================================================
+   NEWS SECTION
+   ================================================== */
+#headline {
+  text-align: center;
+  font-size: 28px;
+  margin: 10px 0 20px;
+}
+
+#news-container {
+  padding-bottom: 20px;
+}
+
+.div-api {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 18px auto;
+  max-width: 1000px;
+  transition: border 0.2s ease;
+}
+
+.div-api:hover {
+  border-color: var(--accent);
+}
+
+.h3-api {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.p-api {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.p2-api {
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.time-api {
+  text-align: right;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+}
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+@media (max-width: 768px) {
+  #h-top {
+    font-size: 28px;
+  }
+
+  #top11 {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .div-api {
+    margin: 14px;
+    padding: 16px;
+  }
+
+  #content {
+    gap: 12px;
+  }
+}
+/* ==================================================
+   SKELETON LOADERS
+   ================================================== */
+
+.skeleton {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 18px auto;
+  max-width: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  animation: shimmer 1.4s infinite;
+}
+
+body.dark .skeleton::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+}
+
+@keyframes shimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+.skeleton-title {
+  height: 18px;
+  width: 70%;
+  border-radius: 6px;
+  background: var(--border);
+  margin-bottom: 12px;
+}
+
+.skeleton-text {
+  height: 14px;
+  width: 100%;
+  border-radius: 6px;
+  background: var(--border);
+  margin-bottom: 8px;
+}
+
+.skeleton-text.short {
+  width: 40%;
+}

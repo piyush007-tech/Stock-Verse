@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — StockVerse</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+
+  <main class="contact-wrapper">
+    <section class="contact-info">
+      <h1>Contact StockVerse</h1>
+      <p>
+        Questions, feedback, or suggestions?  
+        We read everything.
+      </p>
+
+      <div class="contact-details">
+        <p>📞 <a href="tel:+918307337363">+91 8307337363</a></p>
+        <p>📧 <a href="mailto:carius0987446@gmail.com">carius0987446@gmail.com</a></p>
+      </div>
+    </section>
+
+    <section class="contact-form">
+      <h2>Leave a Review</h2>
+
+      <form
+        action="https://formsubmit.co/carius0987446@gmail.com"
+        method="POST"
+      >
+        <input type="text" name="Name" placeholder="Your Name" required />
+        <input type="email" name="Email" placeholder="Your Email" required />
+
+        <!-- Rating -->
+          <div class="stars" id="ratingStars">
+  <span data-value="1">★</span>
+  <span data-value="2">★</span>
+  <span data-value="3">★</span>
+  <span data-value="4">★</span>
+  <span data-value="5">★</span>
+</div>
+
+<input type="hidden" name="Rating" id="ratingValue" required />
+
+
+        <textarea
+          name="Review"
+          placeholder="Write your feedback…"
+          required
+        ></textarea>
+
+        <input type="hidden" name="_subject" value="New StockVerse Review ⭐" />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 StockVerse. All rights reserved.</p>
+  </footer>
+<script>
+  const stars = document.querySelectorAll("#ratingStars span");
+  const ratingInput = document.getElementById("ratingValue");
+
+  stars.forEach((star, index) => {
+    star.addEventListener("mouseenter", () => {
+      highlight(index + 1);
+    });
+
+    star.addEventListener("mouseleave", () => {
+      highlight(ratingInput.value);
+    });
+
+    star.addEventListener("click", () => {
+      ratingInput.value = index + 1;
+      highlight(index + 1);
+    });
+  });
+
+  function highlight(count) {
+    stars.forEach((s, i) => {
+      s.classList.toggle("active", i < count);
+    });
+  }
+</script>
+
+</body>
+</html>

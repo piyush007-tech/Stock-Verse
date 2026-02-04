@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>StockVerse — Market & Stock News</title>
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- Optional: Better font (safe, professional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===============================
+       TOP / HEADER
+       =============================== -->
+  <header id="top">
+    <div id="top11">
+      <!-- Logo -->
+      <div>
+        <img
+          id="logo"
+          src="logo.jpeg"
+          alt="StockVerse Logo"
+          width="32"
+          height="32"
+        />
+      </div>
+
+      <!-- Controls -->
+      <div id="top1">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search news on this page…"
+        />
+        <button id="searchBtn">Search</button>
+        <button id="btn-top" title="Toggle theme">
+          🌙
+        </button>
+        <a href="login.html">
+          <button id="btn-top1">Login</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero text -->
+    <h1 id="h-top">Welcome to StockVerse</h1>
+    <p id="p-top">
+      Real-time stock market news, global markets, and financial insights.
+    </p>
+    <h4>LIVE MARKET UPDATES</h4>
+  </header>
+
+  <!-- ===============================
+       NAV / FILTER STRIP
+       =============================== -->
+  <nav id="content">
+  <h3 id="btn-live">Live</h3>
+  <h3 id="btn-trending" onclick="showUnderDevelopment()">Trending</h3>
+  <a href="contact.html" id="contact-link">
+    <h3>Contact</h3>
+  </a>
+</nav>
+
+
+  <!-- ===============================
+       NEWS SECTION
+       =============================== -->
+  <main id="news-container">
+    <h2 id="headline">Top Headlines</h2>
+    <!-- Skeleton loaders injected here by JS -->
+    <!-- News cards injected here by api.js -->
+  </main>
+
+  <!-- ===============================
+       FOOTER
+       =============================== -->
+  <footer>
+    <p>© 2026 StockVerse. All rights reserved.</p>
+  </footer>
+
+  <!-- ===============================
+       SCRIPTS
+       =============================== -->
+  <!-- Core site logic -->
+  <script src="main.js" defer></script>
+
+  <!-- API + Skeleton loader logic -->
+  <script src="api.js" defer></script>
+
+  <!-- ===============================
+       NO-JS FALLBACK
+       =============================== -->
+  <noscript>
+    <div style="padding:20px; text-align:center; color:red;">
+      JavaScript is required to load live market news.
+    </div>
+  </noscript>
+
+</body>
+</html>
