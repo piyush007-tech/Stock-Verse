@@ -81,7 +81,7 @@ a {
 /* Right side controls */
 #top1 {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -319,6 +319,7 @@ body.dark .skeleton::after {
 .skeleton-text.short {
   width: 40%;
 }
+
 
 
 
