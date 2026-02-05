@@ -39,3 +39,8 @@ function showUnderDevelopment() {
 
 /* expose for inline HTML usage */
 window.showUnderDevelopment = showUnderDevelopment;
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
+
