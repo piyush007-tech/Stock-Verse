@@ -44,6 +44,7 @@ body {
 }
 #searchBtn{
    border-radius: 50%;
+   padding: 2px;
 }
 
 a {
@@ -318,4 +319,5 @@ body.dark .skeleton::after {
 .skeleton-text.short {
   width: 40%;
 }
+
 
