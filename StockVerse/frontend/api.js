@@ -78,7 +78,7 @@ function renderNews(data, titleText) {
 function loadNews(type = "headlines") {
   showSkeletons();
 
-  fetch(`https://stockverse-backend.onrender.com/api/news/${type}`)
+  fetch(`https://stockverse-fyy7.onrender.com/api/news/${type}`)
     .then(res => res.json())
     .then(data => {
       const heading =
@@ -103,7 +103,7 @@ function searchNews(query) {
   showSkeletons();
 
   fetch(
-    `https://stockverse-backend.onrender.com/api/news/search?q=${encodeURIComponent(query)}`
+    `https://stockverse-fyy7.onrender.com/api/news/search?q=${encodeURIComponent(query)}`
   )
     .then(async (res) => {
 
